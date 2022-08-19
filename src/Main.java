@@ -4,6 +4,7 @@ public class Main {
         carro Carro = new carro("hb20", 2018, "branco", 85000, 7, "sedan");
         moto Moto = new moto("honda MXRT", 2020, "verde", 25000, 3, "esportiva");
         caminhao Caminhao = new caminhao("caminhao MXRT", 2021, "preto", 200000, 5, 3);
+        onibus Onibus = new onibus("onibus padrao", 2018, "verde", 220000, 6, 30);
         System.out.println(Carro + Carro.getTipo());
         System.out.println(Moto + Moto.getTipo());
         System.out.println(Caminhao + "" + Caminhao.getCapacidade());
@@ -24,7 +25,12 @@ public class Main {
         if(Caminhao.getCapacidade() <= 3){
             System.out.println("Preco de venda do caminhao = " + (Caminhao.getPrecoCompra() * 1.07));
         }else{
-            System.out.println("Preco de venda do caminhao = " + (Caminhao.getPrecoCompra() * 1.05));
+            System.out.println("Preco de venda do caminhao = " + (Onibus.getPrecoCompra() * 1.05));
+        }
+        if( Onibus.getQtdAssentos() > 15 && Onibus.getAnoFabricacao() > 2020 ){
+            System.out.println("Preco de venda do onibus = " + (Onibus.getPrecoCompra() * 1.12));
+        }else{
+            System.out.println("Preco de venda do onibus = " + (Onibus.getPrecoCompra() * 1.08));
         }
 
     }
